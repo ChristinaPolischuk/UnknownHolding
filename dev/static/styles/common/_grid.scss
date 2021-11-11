@@ -1,0 +1,15 @@
+@import "functions";
+@import "variables";
+
+@import "mixins/lists";
+@import "mixins/breakpoints";
+@import "mixins/container";
+@import "mixins/grid";
+
+@mixin make-max-width-container($max-widths: $container-max-widths, $breakpoints: $grid-breakpoints) {
+	@each $breakpoint, $max-width in $max-widths {
+		@include media-breakpoint-up($breakpoint, $breakpoints) {
+			max-width: $max-width;
+		}
+	}
+}

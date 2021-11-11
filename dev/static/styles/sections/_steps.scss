@@ -1,0 +1,85 @@
+.steps {
+  padding: 120px 0 105px;
+  background-color: $accent_color;
+  color: $black_text;
+  @include media-breakpoint-down(lg) {
+    padding: 60px 0;
+  }
+  @include media-breakpoint-down(sm) {
+    padding: 30px 0;
+  }
+  &-content {
+    @extend .row;
+  }
+  &-info {
+    @include make-col(5);
+    @include media-breakpoint-down(lg) {
+      @include make-col(12);
+    }
+  }
+  &-stages {
+    @include make-col(7);
+    text-align: center;
+    @include media-breakpoint-down(lg) {
+      @include make-col(12);
+    }
+    &__list {
+      display: flex;
+      justify-content: flex-end;
+      @include media-breakpoint-down(lg) {
+        margin-top: 30px;
+      }
+      @include media-breakpoint-down(sm) {
+        display: block;
+      }
+    }
+    &__item {
+      position: relative;
+      @include media-breakpoint-down(lg) {
+        flex: 1;
+      }
+      &:not(:last-child) {
+        margin-right: 30px;
+        @include media-breakpoint-down(sm) {
+          margin-right: 0;
+          margin-bottom: 35px;
+        }
+        &::after {
+          content: '';
+          @include position('absolute', $left: 100%, $top: 80px);
+          @include size(76px, 2px);
+          margin-left: -38px;
+          background-color: #ffffff;
+          @include media-breakpoint-down(sm) {
+            content: none;
+          }
+        }
+      }
+    }
+    &__icon {
+      margin-bottom: 35px;
+      @include size(80px);
+      fill: #ffffff;
+      @include media-breakpoint-down(sm) {
+        margin-bottom: 10px;
+      }
+    }
+    &__title, &__date {
+      @include rem(16);
+      line-height: 1.5;
+    }
+    &__title {
+      margin-bottom: 5px;
+      font-weight: 400;
+      &.active {
+        font-weight: 700;
+      }
+    }
+    &__btn {
+      margin-top: 70px;
+      @include media-breakpoint-down(lg) {
+        margin-top: 35px;
+      }
+    }
+  }
+}

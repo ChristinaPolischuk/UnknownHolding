@@ -1,0 +1,180 @@
+.card {
+  position: relative;
+  padding: 40px 34px 30px;
+  margin: 0 20px;
+  //max-width: 350px;
+  max-width: 20%;
+  border-radius: 10px;
+  background-color: $dark_grey;
+  transition: box-shadow .3s;
+  @include media-breakpoint-down(xxl) {
+    padding: 25px 20px 20px;
+    margin: 0 10px;
+  }
+  &:hover {
+    box-shadow: 0 4px 4px 4px $accent_color;
+    .card-back {
+      pointer-events: auto;
+      opacity: 1;
+    }
+  }
+  &-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 15px;
+    margin-bottom: 35px;
+    border-bottom: 1px solid $accent_color;
+  }
+  &-title {
+    @include rem(14);
+    line-height: 1.43;
+  }
+  &-date {
+    & > * {
+      display: block;
+    }
+    &__month {
+      text-align: center;
+      @include rem(12);
+    }
+    &__time {
+      font-size: 20px;
+      font-weight: 700;
+    }
+  }
+  &-team {
+    &__avatars {
+      margin-bottom: 15px;
+    }
+    &__avatar {
+      display: inline-flex;
+      &:not(:last-child) {
+        margin-right: 20px;
+      }
+      &-icon {
+        @include size(16px, 35px);
+        fill: $accent_color;
+      }
+    }
+    &__info {
+      margin-bottom: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-weight: 700;
+    }
+    &__group {
+      display: block;
+      @include rem(20);
+      line-height: 1.75;
+      @include media-breakpoint-down(xxl) {
+        @include rem(16);
+      }
+    }
+    &__rating {
+      min-width: 64px;
+      padding: 5px 10px;
+      @include rem(14);
+      text-align: center;
+      border: 1px solid $accent_color;
+    }
+  }
+
+  &-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &-info {
+    @include rem(12);
+    color: $grey;
+  }
+}
+
+.card-back {
+  @include position("absolute", $top: 0, $right: 0, $bottom: 0, $left: 0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba($black_overlay, .76);
+  border-radius: 10px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .3s;
+}
+
+.cards-slider {
+  .slick-list {
+    padding: 10px 0 55px;
+    @include media-breakpoint-down(lg) {
+      padding-bottom: 30px;
+    }
+  }
+  &__nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__btn {
+    background-color: transparent;
+    transition: transform .3s;
+    &:hover {
+      .cards-slider__icon circle {
+        animation: drawCircle 1s;
+      }
+    }
+    &:active {
+      transform: scale(.9);
+    }
+  }
+  &__icon {
+    @include size(85px);
+    @include media-breakpoint-down(xl) {
+      @include size(40px);
+    }
+    circle {
+      stroke-dasharray: 260;
+    }
+
+  }
+  &__dots {
+    margin: 0 50px;
+    @include media-breakpoint-down(xl) {
+      margin: 0 15px;
+    }
+    .slick-dots {
+      display: flex;
+      li {
+        margin-right: 15px;
+        @include media-breakpoint-down(sm) {
+          margin: 0 5px;
+        }
+        &:last-child {
+          margin-right: 0;
+        }
+        &.slick-active {
+          .cards-slider__dot {
+            background-color: $accent_color;
+          }
+        }
+      }
+    }
+  }
+  &__dot {
+    cursor: pointer;
+    @include size(15px);
+    display: block;
+    border-radius: 15px;
+    background-color: $dark_grey;
+  }
+}
+
+@keyframes drawCircle {
+  from {
+    stroke-dashoffset: 260;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}

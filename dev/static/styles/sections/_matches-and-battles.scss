@@ -1,0 +1,11 @@
+.matches-and-battles {
+  min-height: 100vh;
+  padding: 140px 0;
+  background-color: $black_bg;
+  @include media-breakpoint-down(lg) {
+    padding: 60px 0;
+  }
+  @include media-breakpoint-down(sm) {
+    padding: 30px 0;
+  }
+}

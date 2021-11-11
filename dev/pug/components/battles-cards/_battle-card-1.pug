@@ -1,0 +1,18 @@
+.card
+    .card-front
+        .card-header
+            span.card-title Group Stage
+        .card-body
+            .card-team__avatars
+                +icon("r", "card-team__avatar-icon")
+            .card-team__info
+                .card-team__groups
+                    span.card-team__group Group A
+                    span.card-team__group Group B
+                span.card-team__rating match #1
+        .card-footer
+            span.card-info Map: Erangel
+    .card-back
+        a.btn-watch(href="#")
+            +icon('watch', 'btn-watch__icon')
+            span.btn-watch__text Watch Live

@@ -1,0 +1,68 @@
+@mixin size($a, $b: false) {
+	width: $a;
+	@if $b {
+		height: $b;
+	} @else {
+		height: $a;
+	}
+}
+@mixin rem($size) {
+	font-size: #{$size/16}rem;
+}
+@mixin absolute-center() {
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+@mixin absolute-x() {
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+}
+@mixin absolute-y() {
+	top: 50%;
+	transform: translateY(-50%);
+}
+@mixin absolute-all($num: 0) {
+	position: absolute;
+	top: $num;
+	bottom: $num;
+	left: $num;
+	right: $num;
+}
+@mixin position($position, $top: null, $bottom: null, $left: null, $right: null) {
+	position: $position;
+	top: $top;
+	right: $right;
+	bottom: $bottom;
+	left: $left;
+}
+@mixin placeholder {
+	::-webkit-input-placeholder {
+		@content;
+	}
+	:-moz-placeholder {
+		@content;
+	}
+	::-moz-placeholder {
+		@content;
+	}
+	:-ms-input-placeholder {
+		@content;
+	}
+}
+@mixin btn_border($border_color: $accent_color) {
+	background-repeat: no-repeat;
+	background-image: linear-gradient(to right, $border_color 100%, $border_color 100%),
+	linear-gradient(to bottom, $border_color 100%, $border_color 100%),
+	linear-gradient(to right, $border_color 100%, $border_color 100%),
+	linear-gradient(to bottom, $border_color 100%, $border_color 100%);
+	background-size: 100% 2px,
+	2px 100%,
+	100% 2px,
+	2px 100%;
+	background-position: 0 0,
+	100% 0,
+	100% 100%,
+	0 100%;
+}

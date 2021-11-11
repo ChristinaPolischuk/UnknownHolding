@@ -1,0 +1,99 @@
+.main {
+  position: relative;
+  &-slider {
+    &__wrapper {
+      position: relative;
+    }
+    &__dots {
+      @include position("absolute", $left: 50%, $bottom: 30px);
+      z-index: 1000;
+      transform: translateX(-50%);
+      .slick-dots {
+        display: flex;
+        li {
+          margin-right: 15px;
+          &:last-child {
+            margin-right: 0;
+          }
+          &.slick-active {
+            .main-slider__dot {
+              background-color: $accent_color;
+            }
+          }
+        }
+      }
+    }
+    &__dot {
+      cursor: pointer;
+      @include size(15px);
+      display: block;
+      border-radius: 15px;
+      background-color: #ffffff;
+    }
+    &__item {
+      padding-top: 105px;
+      padding-bottom: 150px;
+      min-height: 100vh;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: right top;
+      @include media-breakpoint-down(xl) {
+        padding-bottom: 75px;
+      }
+      @include media-breakpoint-down(lg) {
+        padding-top: 90px;
+      }
+      @include media-breakpoint-down(sm) {
+        background-position: center top;
+      }
+    }
+    &__content {
+      margin-top: 160px;
+      max-width: 705px;
+      @include media-breakpoint-down(xl) {
+        margin-top: 80px;
+      }
+      @include media-breakpoint-down(lg) {
+        margin-top: 60px;
+      }
+    }
+    &__logo {
+      @include size(191px, 60px);
+      margin-bottom: 35px;
+      display: block;
+    }
+    &__title {
+      @include rem(60);
+      margin-bottom: 25px;
+      @include media-breakpoint-down(lg) {
+        @include rem(40);
+        margin-bottom: 15px;
+      }
+      @include media-breakpoint-down(sm) {
+        @include rem(35);
+      }
+    }
+    &__text {
+      @include media-breakpoint-down(lg) {
+        @include rem(16);
+      }
+    }
+    &__buttons {
+      margin-top: 220px;
+      @include media-breakpoint-down(xl) {
+        margin-top: 110px;
+      }
+      @include media-breakpoint-down(sm) {
+        margin-top: 55px;
+      }
+
+      & > *:not(:last-child) {
+        margin-right: 35px;
+        @include media-breakpoint-down(sm) {
+          margin-right: 10px;
+          margin-bottom: 15px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,11 @@
+extends layout/main
+
+block content
+	include sections/_main
+	include sections/_matches-and-battles
+	include sections/_steps
+	include components/_footer
+
+block script 
+	script(src="static/js/libs/libs.js")
+	script(src="static/js/main.js")

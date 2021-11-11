@@ -1,0 +1,37 @@
+mixin teamsTable(rating, text, src, alt)
+    - src = src || 'static/images/general/ua_flag.svg'
+    - alt = alt || 'Ukraine'
+    tr.teams-table__row
+        td.teams-table__col=rating
+        td.teams-table__col
+            img.teams-table__flag(src=src, alt=alt)
+            span.teams-table__text=text
+
+footer.footer(style="background-image: url(static/images/content/footer/footer-bg-1.jpg)")
+    .footer-container.container
+        .footer-content
+            .footer-content__header
+                h2.section-title.section-title--white Зарегистрировано: 24
+                p.section-subtitle Осталось:
+                    span.timer#timer 15мин 30сек
+            table.teams-table
+                thead.teams-table__header
+                    tr.teams-table__header-row
+                        th.teams-table__col
+                            span.teams-table__title #
+                        th.teams-table__col
+                            span.teams-table__title Team
+                tbody.teams-table__body
+                    +teamsTable("353","Dianne Russel")
+                    +teamsTable("2","Dianne Russel")
+                    +teamsTable("3","Dianne Russel")
+                    +teamsTable("45","Dianne Russel")
+                    +teamsTable("65","Dianne Russel")
+                    +teamsTable("43","Dianne Russel")
+                    +teamsTable("67","Dianne Russel")
+                    +teamsTable("1","Dianne Russel")
+                    +teamsTable("78","Dianne Russel")
+            .footer-content__links
+                a.footer-content__link(href="#") Support
+                a.footer-content__link(href="#") Rules
+                a.footer-content__link(href="#") FAQ

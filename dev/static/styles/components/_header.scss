@@ -1,0 +1,17 @@
+.header {
+  @include position("absolute", $top: 0, $left: 0, $right: 0);
+  z-index: 1000;
+  &-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0 25px;
+    width: 740px;
+    max-width: 100%;
+    border-bottom: 1px solid $accent_color;
+    background-image: linear-gradient(to right,transparent 5%, 10%, rgba(#000, .7) 15%, 95%, transparent 100%);
+    @include media-breakpoint-down(lg) {
+      padding-bottom: 10px;
+    }
+  }
+}

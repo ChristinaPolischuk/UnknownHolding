@@ -1,0 +1,9 @@
+.tabs
+    .tabs-header
+        button.tabs-btn.active(data-tab="matches") Matches
+        button.tabs-btn(data-tab="battles") Battles
+    .tabs-body
+        .tabs-item.matches.active
+            include _matches
+        .tabs-item.battles
+            include _battles
