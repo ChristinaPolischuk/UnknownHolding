@@ -1,13 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="77625068-c860-4d01-86a8-ca4cc9666ad3" name="Default Changelist" comment="" />
+    <list default="true" id="77625068-c860-4d01-86a8-ca4cc9666ad3" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="20dBOMRR86VlY6V1NOOUtloogQF" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -15,7 +21,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/dev/static/fonts" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../#Work/autofiles.com" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="IntelliLang.Configuration" />
     <property name="vue.rearranger.settings.migration" value="true" />
@@ -41,7 +47,8 @@
       <updated>1636364560460</updated>
       <workItem from="1636364566781" duration="17792000" />
       <workItem from="1636436360586" duration="13924000" />
-      <workItem from="1636618850229" duration="2280000" />
+      <workItem from="1636618850229" duration="3055000" />
+      <workItem from="1636714337478" duration="227000" />
     </task>
     <servers />
   </component>
@@ -53,10 +60,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1636369316055" />
-    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1636367110148">
+    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1636714445584">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1636367110148" />
+    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1636714445584" />
     <state x="277" y="57" key="SettingsEditor" timestamp="1636374230055">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
